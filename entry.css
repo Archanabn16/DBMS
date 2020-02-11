@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    padding: 0;
+background-color: gray;
+    
+}
+
+
+form{
+    
+    margin: 10px;
+    padding: 10px;
+    top: 10%;
+    left: 25%;
+position: absolute;
+align-self: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: x-large;
+}
+div{
+    margin: 20px;
+    padding: 5px;
+    
+}
+#stdname{
+    color: red;
+    font-size: large;
+}
+
+#usn{
+    color: red;
+    font-size: large;
+}
+
+#fname{
+    color: red;
+    font-size: large;
+}
+
+#mname{
+    color: red;
+    font-size: large;
+}
+
+#pno{
+    color: red;
+    font-size: large;
+}
+
+#parentno{
+    color: red;
+    font-size: large;
+}
+
+#course{
+    color: red;
+    font-size: large;
+}
+
+#year{
+    color: red;
+    font-size: large;
+}
+
+#sem{
+    color: red;
+    font-size: large;
+}
+
+#age{
+    color: red;
+    font-size: large;
+}
+
+#a1{
+    color: red;
+    font-size: large;
+}
+
+#button{
+    margin: 25px;
+    padding: 5px;
+    top:170px;
+   font-size: x-large;
+    color:rgba(15, 14, 14, 0.972);
+    background-color: rgb(30, 141, 214);
+    
+}
+
