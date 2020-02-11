@@ -1,0 +1,238 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="entry.css">
+
+            
+    </head>
+    <body>
+            
+         <script>
+function validation(){
+    var a=document.myform.id.value;
+    var b=document.myform.stname.value;
+    var c=document.myform.usn.value;
+    var d=document.myform.fname.value;
+    var e=document.myform.mname.value;
+    var f=document.myform.pno.value;
+    var g=document.myform.parentno.value;
+    var h=document.myform.age.value;
+    var i=document.myform.course.value;
+    var j=document.myform.year.value;
+    var k=document.myform.sem.value;
+    if(b==""){
+        document.getElementById("stdname").innerHTML="**please fill the student name";
+        return false;
+    }
+
+    if((b.length<3)||(b.length>20)){
+        document.getElementById("stdname").innerHTML="**invalid student name";
+        return false;
+    }
+
+    if(!isNaN(b)){
+        document.getElementById("stdname").innerHTML="**only charecters are allowed";
+        return false;
+    }
+
+    if(c==""){
+        document.getElementById("usn").innerHTML="**please fill the usn number";
+        return false;
+    }
+
+    if(d==""){
+        document.getElementById("fname").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if((d.length<3)||(b.length>20)){
+        document.getElementById("fname").innerHTML="**invalid student name";
+        return false;
+    }
+
+    if(!isNaN(d)){
+        document.getElementById("fname").innerHTML="**only charecters are allowed";
+        return false;
+    }
+
+
+    if(e==""){
+        document.getElementById("mname").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if((e.length<3)||(b.length>20)){
+        document.getElementById("mname").innerHTML="**invalid student name";
+        return false;
+    }
+
+    if(!isNaN(e)){
+        document.getElementById("mname").innerHTML="**only charecters are allowed";
+        return false;
+    }
+
+   
+
+
+    if(f==""){
+        document.getElementById("pno").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if(f.length!=10){
+        document.getElementById("pno").innerHTML="**please fill valid mobile number";
+        return false;
+    }
+
+    if(isNaN(f)){
+        document.getElementById("pno").innerHTML="**only numbers are allowed";
+        return false;
+    }
+
+    if(a.indexOf('@')<=0){
+        document.getElementById("a1").innerHTML="incorrect mailid";
+        return false;
+    }
+    if(a.charAt(a.length-4)!='.'){
+        document.getElementById("a1").innerHTML="incorrect mailid";
+        return false;
+    }
+
+    if(h==""){
+        document.getElementById("age").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if((h.length>2)||(h==0)){
+        document.getElementById("age").innerHTML="**please fill the valide details";
+        return false;
+    }
+
+    if(g==""){
+        document.getElementById("parentno").innerHTML="**please fill the details";
+        return false;
+    }
+    if(g.length!=10){
+        document.getElementById("parentno").innerHTML="**please fill valid mobile number";
+        return false;
+    }
+
+    if(isNaN(g)){
+        document.getElementById("parentno").innerHTML="**only numbers are allowed";
+        return false;
+    }
+
+
+   
+    if(i==""){
+        document.getElementById("course").innerHTML="**please fill the details";
+        return false;
+    }
+    if(!isNaN(i)){
+        document.getElementById("course").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if(j==""){
+        document.getElementById("year").innerHTML="**please fill the details";
+        return false;
+    }
+    if(j.length!=4){
+        document.getElementById("year").innerHTML="**please fill the valide details";
+        return false;
+    }
+
+
+    if(k==""){
+        document.getElementById("sem").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if(k.length>1){
+        document.getElementById("sem").innerHTML="**please fill the valide details";
+        return false;
+    }
+ 
+
+
+}
+
+         </script>
+
+        <marquee>
+            <h1>.......!!STUDENT DETAILS!!......</h1>
+        </marquee>
+
+   <form name="myform" method="POST" action="submit.php" onsubmit="return validation()">
+            <div >
+                student name:<br>
+                <input type="text"  name="stname"  size="70px" autocomplete="off" ><br>
+                <span id="stdname"></span>
+            </div>
+
+            <div>
+                 USN number:<br>
+                  <input type="text" name="usn"  size="70px" autocomplete="off" ><br>
+                  <span id="usn"></span>
+                </div>
+
+                <div>
+                 Father name:<br>
+                 <input type="text" name="fname"  size="70px" autocomplete="off"><br>
+                 <span id="fname"></span>
+                </div>
+
+                <div>
+                 Mother name:<br>
+                 <input type="text" name="mname"  size="70px" autocomplete="off"><br>
+                 <span id="mname"></span>
+                </div>
+
+                <div>
+                 mobile number:<br>
+                 <input type="text" name="pno"  size="70px" autocomplete="off"><br>
+                 <span id="pno"></span>
+                </div>
+
+                <div>
+                 mail id:<br>
+                 <input type="text" name="id" size="70px"  autocomplete="off" value=""><br>
+                 <span id="a1"></span>
+                </div>
+                <div>
+                    age:<br>
+                    <input type="text" name="age"   size="70px" autocomplete="off"><br>
+                    <span id="age"></span>
+                </div>
+
+            
+                <div>
+                        parent moble number:<br>
+                        <input type="text" name="parentno"  size="70px" autocomplete="off"><br>
+                        <span id="parentno"></span>
+                   </div>
+            <div>
+           course:<br>
+           <input type="text"  name="course"  size="70px" autocomplete="off"><br>
+           <span id="course"></span>
+        </div>
+
+        <div>
+            year:<br>
+            <input type="text" name="year"   size="70px" autocomplete="off"><br>
+            <span id="year"></span>
+        </div>
+
+        <div>
+            sem:<br>
+            <input type="textr" name="sem" size="70px" autocomplete="off"><br>
+            <span id="sem"></span>
+        </div>
+          <input type="submit" value="submit" id="button"></input>
+
+    </form>
+
+
+
+        
+    </body>
+</html>
