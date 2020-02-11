@@ -1,0 +1,121 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="entry.css">
+    </head>
+    <body>
+           <script>
+function validation(){
+    var a=document.myform.tmno.value;
+    var b=document.myform.stname.value;
+    var c=document.myform.usn.value;
+    var d=document.myform.flno.value;
+    var e=document.myform.rno.value;
+    if(b==""){
+        document.getElementById("stdname").innerHTML="**please fill the student name";
+        return false;
+    }
+
+    if((b.length<3)||(b.length>20)){
+        document.getElementById("stdname").innerHTML="**invalid student name";
+        return false;
+    }
+
+    if(!isNaN(b)){
+        document.getElementById("stdname").innerHTML="**only charecters are allowed";
+        return false;
+    }
+
+    if(c==""){
+        document.getElementById("usn").innerHTML="**please fill the usn number";
+        return false;
+    }
+
+    if(d==""){
+        document.getElementById("fname").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if(d.length>1){
+        document.getElementById("fname").innerHTML="**please fill valid details";
+        return false;
+    }
+    if(isNaN(d)){
+        document.getElementById("fname").innerHTML="**only numbers are allowed";
+        return false;
+    }
+
+    if(e==""){
+        document.getElementById("mname").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if(e.length!=3){
+        document.getElementById("mname").innerHTML="**please fill valid details";
+        return false;
+    }
+
+    if(isNaN(e)){
+        document.getElementById("mname").innerHTML="**only numbers are allowed";
+        return false;
+    }
+    if(a==""){
+        document.getElementById("pno").innerHTML="**please fill the details";
+        return false;
+    }
+
+    if(a.length!=1){
+        document.getElementById("pno").innerHTML="**please fill valid details";
+        return false;
+    }
+    if(isNaN(a)){
+        document.getElementById("pno").innerHTML="**only numbers are allowed";
+        return false;
+    }
+
+
+}
+           </script> 
+         
+
+        <marquee>
+            <h1>.......!!ROOM DETAILS!!......</h1>
+        </marquee>
+
+   <form method="POST" action="room.php" name="myform" onsubmit="return validation()">
+            <div>
+                student name:<br>
+                <input type="text"  name="stname" size="70px" autocomplete="off"><br>
+                <span id="stdname"></span>
+            </div>
+
+            <div>
+                 USN number:<br>
+                  <input type="text" name="usn"  size="70px" autocomplete="off"><br>
+                  <span id="usn"></span>
+                </div>
+
+                <div>
+                 floor:<br>
+                 <input type="text" name="flno"  size="70px" autocomplete="off"><br>
+                 <span id="fname"></span>
+                </div>
+
+                <div>
+                 room no:<br>
+                 <input type="text" name="rno"  size="70px" autocomplete="off"><br>
+                 <span id="mname"></span>
+                </div>
+
+                <div>
+                total members:<br>
+                <input type="text" name="tmno"  size="70px" autocomplete="off"><br>
+                <span id="pno"></span>
+                </div>
+
+                
+                <input type="submit" value="submit" id="button"></input>
+
+    </form>
+        
+    </body>
+</html>
