@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(17, 13, 13, 0.5),rgba(20, 18, 18, 0.5)),url(hostel.png);
+    
+    height: 100vh;
+    
+    background-size: cover;
+    background-position: center;
+
+}
+marquee{
+       display: inline-block;
+       position: absolute;
+    top:40%;
+    left: 10%;
+    color:rgb(234, 237, 240);
+    font-size: 30px;
+     }
+
+ul{
+        float: right;
+        list-style-type:none;
+        margin-top: 25px;
+    
+    }
+    ul li{
+        display:inline-block;
+    }
+    ul li a{
+        text-decoration: none;
+        color:white;
+        padding: 5px 20px;
+        border: 1px solid white transparent;
+        transition: o.6s ease;
+        padding:8px;
+        margin: 8px;
+    }
+    ul li a:hover{
+        background-color:rgb(35, 2, 54);
+    }
+   
